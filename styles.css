@@ -1,0 +1,143 @@
+:root {
+  color-scheme: light;
+  --primary: #0f4c81;
+  --primary-dark: #0b3559;
+  --accent: #f4b400;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --bg: #f8fafc;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: var(--white);
+  min-height: 100vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.hero-content {
+  display: grid;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 2rem 0 4rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.lead {
+  font-size: 1.05rem;
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #111827;
+}
+
+.btn-secondary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background: #eef4f8;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 76, 129, 0.08);
+}
+
+.contact {
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
